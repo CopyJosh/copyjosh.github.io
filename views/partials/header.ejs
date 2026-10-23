@@ -1,0 +1,34 @@
+<header class="header clearfix">
+  <nav class="navbar navbar-expand-md navbar-light">
+    <h3 class="navbar-brand brand">
+      Meet
+      <div class="rw-words rw-words-1">
+        <span>Yourself&nbsp;</span>
+        <span>Colleagues</span>
+        <span>Opportunities</span>
+        <span>Aleksey</span>
+      </div>
+    </h3>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleNav" aria-controls="toggleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="toggleNav">
+      <ul class="navbar-nav nav-fill ms-auto">
+        <li class="nav-item">
+          <a class="nav-link flip-animate <% if (path === '/') { %>active<% } %>" href="/"><span data-hover="Aleksey">About</span></a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link flip-animate <% if (path === '/development') { %>active<% } %>" href="/development"><span data-hover="Development">Personal</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link flip-animate <% if (path === '/networking') { %>active<% } %>" href="/networking"><span data-hover="Opportunities">Networking</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link flip-animate <% if (path === '/testimonials') { %>active<% } %>" href="/testimonials"><span data-hover="Testimonials">Engagement</span></a>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+</header>

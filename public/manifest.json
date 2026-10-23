@@ -1,15 +1,4 @@
 {
-  "app.css": "dist/css/app.7b84f44363a97300e8f1d3c668bcef54.css",
-  "app.css.map": "dist/css/app.7b84f44363a97300e8f1d3c668bcef54.css.map",
-  "app.js": "dist/js/app.81224f054064d8a37bfd.js",
-  "app.js.map": "dist/js/app.81224f054064d8a37bfd.js.map",
-  "fonts/fontawesome-webfont.eot": "fonts/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713",
-  "fonts/fontawesome-webfont.svg?v=4.7.0": "fonts/fontawesome-webfont.svg?912ec66d7572ff821749319396470bde",
-  "fonts/fontawesome-webfont.ttf?v=4.7.0": "fonts/fontawesome-webfont.ttf?b06871f281fee6b241d60582ae9369b9",
-  "fonts/fontawesome-webfont.woff2?v=4.7.0": "fonts/fontawesome-webfont.woff2?af7ae505a9eed503f8b8e6982036873e",
-  "fonts/fontawesome-webfont.woff?v=4.7.0": "fonts/fontawesome-webfont.woff?fee66e712a8a08eef5805a46892932ad",
-  "manifest.js": "dist/js/manifest.f210eaf2cd940956ad10.js",
-  "manifest.js.map": "dist/js/manifest.f210eaf2cd940956ad10.js.map",
-  "vendor.js": "dist/js/vendor.99585ab2d4fb9d289eac.js",
-  "vendor.js.map": "dist/js/vendor.99585ab2d4fb9d289eac.js.map"
+  "app.css": "dist/app.b04fc89ac833.css",
+  "app.js": "dist/app.4423651bc7b7.js"
 }

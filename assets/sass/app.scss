@@ -5,8 +5,8 @@
 // Variables
 @import "variables";
 
-@import "node_modules/bootstrap/scss/bootstrap";
-@import "node_modules/font-awesome/scss/font-awesome";
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome/scss/font-awesome";
 
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
@@ -232,3 +232,8 @@ left: 100%;
 .form-control:focus {
   border-color: #405057;
 }
+
+// Preserve the former Bootstrap media layout and input addon.
+.media { display: flex; align-items: flex-start; }
+.media-body { flex: 1; }
+.input-group-addon { padding: .375rem .75rem; background: #e9ecef; border: 1px solid #ced4da; }

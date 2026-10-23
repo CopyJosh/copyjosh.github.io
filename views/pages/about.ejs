@@ -1,9 +1,9 @@
-{% extends 'layout.nunjucks' %}
+<%- include('../partials/top') %>
 
-{% block content %}
+
 <div class="row pb-3">
   <div class="media">
-    <img class="align-self-start mr-3" height="300px" src="{{ assets('images/headshot.png') }}" alt="Meet Aleksey">
+    <img class="align-self-start me-3" height="300px" src="<%= assets('images/headshot.png') %>" alt="Meet Aleksey">
     <div class="media-body">
       <h5 class="mt-0 pt-2">Aleksey Chernobelskiy</h5>
       <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
@@ -31,4 +31,4 @@
     <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
   </div>
 </div>
-{% endblock %}
+<%- include('../partials/bottom') %>

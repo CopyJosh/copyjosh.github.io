@@ -1,6 +1,6 @@
-{% extends 'layout.nunjucks' %}
+<%- include('../partials/top') %>
 
-{% block content %}
+
 <div class="row pb-3">
   <div class="col">
     <h1 class="display-3 mt-0 pt-2 mx-auto text-center">Testimonials</h1>
@@ -19,7 +19,7 @@
             <span class="nav-link disabled" href="#">Filter By:</span>
           </li>
           <li class="nav-item">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Task</a>
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Task</a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="#">Public Speaking</a>
               <a class="dropdown-item" href="#">Personal Development</a>
@@ -27,7 +27,7 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sector</a>
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sector</a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="#">Finance</a>
               <a class="dropdown-item" href="#">Business</a>
@@ -35,7 +35,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Year</a>
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Year</a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="#">2017</a>
               <a class="dropdown-item" href="#">2016</a>
@@ -148,4 +148,4 @@
 </div>
 
 
-{% endblock %}
+<%- include('../partials/bottom') %>
