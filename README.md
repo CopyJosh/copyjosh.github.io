@@ -85,3 +85,21 @@ You must explicitly set BROWSERSYNC_HOST variable to a valid external IP in orde
 ## License
 
 This project is open-sourced software licensed under the [MIT license](https://adr1enbe4udou1n.mit-license.org).
+
+
+## Security maintenance (2026-10-23)
+
+This partial update patches the Express 4, body-parser, cookie-parser, Nunjucks, and debug dependencies.
+Use `npm ci` with the npm lockfile as the dependency source. The old Yarn lockfile is removed to prevent divergent installations.
+
+TODO before any reuse:
+
+- Replace Webpack 3, node-sass 4, Gulp 3, and their old loaders with supported tools.
+- Migrate Vue 2 and Bootstrap 4.0.0-beta. Rebuild every committed browser asset.
+- Verify the complete build and browser routes before any release.
+- Review the remaining audit findings, including the old browser bundles.
+
+The build on Node 24 fails in the old loader stack. Six local Express/Nunjucks routes passed HTTP checks. A trial with Dart Sass still failed in cosmiconfig.
+The Sass trial is not included. The committed browser assets retain their earlier versions.
+The dependency update does not establish that the legacy application is safe to publish.
+No deployment or credential rotation occurred.
