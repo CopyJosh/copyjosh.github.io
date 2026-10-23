@@ -4,57 +4,28 @@ const path = require('path')
 const favicon = require('serve-favicon')
 const logger = require('morgan')
 const cookieParser = require('cookie-parser')
-const bodyParser = require('body-parser')
-const connectLivereload = require('connect-livereload')
 
 const manifest = require('./public/manifest.json')
 const routes = require('./routes/web')
-const nunjucks = require('nunjucks')
 
 const app = express()
 
-const development = process.env.NODE_ENV === 'development'
-const hmr = process.argv.includes('--hot')
-const webpackDevServerPort = parseInt(process.env.WEBPACKDEVSERVER_PORT || '5000', 10)
-
-app.locals.development = development
-
-app.locals.assets = (path) => {
-  if (development) {
-    if (hmr) {
-      return `//localhost:${webpackDevServerPort}/${path}`
-    }
-
-    return `/${path}`
-  }
-
-  let basename = path.split('/').reverse()[0]
-  return `/${manifest[basename]}`
-}
-
-// specific dev environnement
-if (development) {
-  // livereload for server-side modification
-  app.use(connectLivereload())
-}
+// Static images keep their paths; generated CSS and JS use the build manifest.
+app.locals.assets = (assetPath) => `/${manifest[assetPath.split('/').pop()] || assetPath}`
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'nunjucks')
-nunjucks.configure(path.join(__dirname, 'views'), {
-  autoescape: true,
-  express: app
-})
+app.set('view engine', 'ejs')
 
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(logger('dev'))
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use((req, res, next) => {
-  app.locals.path = req.path
+  res.locals.path = req.path
   next()
 })
 
@@ -69,7 +40,7 @@ app.use((req, res, next) => {
 })
 
 // error handler
-app.use((err, req, res) => {
+app.use((err, req, res, next) => {
   // set locals, only providing error in development
   res.locals.message = err.message
   res.locals.error = req.app.get('env') === 'development' ? err : {}

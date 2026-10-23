@@ -1,10 +1,10 @@
-{% extends 'layout.nunjucks' %}
+<%- include('../partials/top') %>
 
-{% block content %}
+
 <div class="row pb-3">
   <h1 class="display-3 mt-0 py-2 mx-auto text-center">Aleksey Chernobelskiy</h1>
   <div class="container">
-    <img class="rounded float-left mr-3" height="300px" src="images/headshot.png" alt="Meet Aleksey">
+    <img class="rounded float-start me-3" height="300px" src="images/headshot.png" alt="Meet Aleksey">
     <div class="pt-2">
       <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
       <p>Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
@@ -64,4 +64,4 @@
 </div>
 
 
-{% endblock %}
+<%- include('../partials/bottom') %>

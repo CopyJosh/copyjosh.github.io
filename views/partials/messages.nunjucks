@@ -1,7 +1,0 @@
-{% if message %}
-<div class="alert alert-{{ message.type }}" role="alert">
-  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-  <span class="sr-only">Error:</span>
-  {{ message.body }}
-</div>
-{% endif %}
